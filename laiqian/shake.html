@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<title>来钱摇一摇</title>
+	<link rel="stylesheet" href="./css/reset.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/common.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/shake.css?ver=version20141104">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<script type="text/javascript" src="./js/jquery.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/common.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/shake.js?ver=version20141104"></script>
+</head>
+<body>
+	<audio class="musicBox" preload= "auto">
+		<source src="./images/shake/glass.wav">
+	</audio>
+	<audio class="musicBox" preload= "auto">
+		<source src="./images/shake/hongbao.wav">
+	</audio>
+	<div class="header"></div>
+	<div class="center">
+		<div class="phone_box"><img src="./images/shake/phone.png" alt="手机摇一摇" class="animate"></div>
+	</div>
+	<div class="footer">
+		<h2 class="title">摇钱攻略</h2>
+		<ul>
+			<li>1.猛摇手机，摇来惊喜！最高可摇来100万元虚拟本金</li>
+			<li>2.点击“虚拟本金”,开通来钱虚拟户,领取虚拟本金,试水投资</li>
+			<li>3.在虚拟体验期内，挣的钱都归你</li>
+			<li>4.已开通来钱虚拟户的客户，不再重复参加本次活动</li>
+			<li>5.更多活动详情，请查看<a href="shakeRules.html">活动规则</a></li>
+		</ul>
+	</div>
+	<div class="pop_mask" id="js_shake_show">
+		<div class="content_box">
+			<div class="money">0.00<i>元</i></div>
+			<div class="btn"><a id="js_shake_ok">你摇出的最高金额为0元<br>你还有0次机会</a></div>
+		</div>
+	</div>
+</body>
+</html>

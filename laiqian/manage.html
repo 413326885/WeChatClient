@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<title>账户管理</title>
+	<link rel="stylesheet" href="./css/reset.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/common.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/manage.css?ver=version20141104">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<script type="text/javascript" src="./js/jquery.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/common.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/manage.js?ver=version20141104"></script>
+</head>
+<body class="manage">
+	<header>
+		<h1 class="title">个人信息</h1>
+	</header>
+	<section>
+		<ul class="box" id="js_v_box">
+			<li class="user"><a></a></li>
+			<li class="pwd"><a href="change_password.html">修改密码</a></li>
+		</ul>
+		<ul class="box">
+			<li class="tel"><a>客服电话：400-600-8800</a></li>
+		</ul>
+		<div class="unbindinfo_btn disable" id="js_unbindinfo_v">解除绑定-虚拟用户</div>
+		<div class="unbindinfo_btn disable" id="js_unbindinfo">解除绑定-真实用户</div>
+		<div class="unbindinfo_btn" id="js_register"><a href="register.html">虚拟用户注册</a></div>
+		<div class="unbindinfo_btn disable" id="js_login_r"><a href="login_reality.html">真实用户登录</a></div>
+		<div class="unbindinfo_btn disable" id="js_login_v"><a href="login_virtual.html">虚拟用户登录</a></div>
+	</section>
+</body>
+</html>

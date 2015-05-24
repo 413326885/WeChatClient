@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ch">
+<head>
+    <title>标的详情</title>
+    <meta charset="UTF-8">
+
+    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+    <link href="./css/subject_detail.css" rel="stylesheet">
+    <script src="./js/iScroll.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/subject_detail.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-default" id="navbar">
+        <img id="logo" src="./images/common/logo.png" alt="logo">
+        <center>
+            <span id="title">标的详情</span>
+        </center>
+    </nav>
+
+    <div class="panel panel-default" id="profit">
+        <div class="panel-heading" id="expectIncome">
+            预期年化收益率：
+        </div>
+        <div class="panel-body" id="expectRate">
+            <center> 8% </center>
+        </div>
+        <table class="table">
+            <tr>
+                <td>投资期限：</td><td><span id="invest_period">6</span>个月</td>
+                <td>剩余可投金额：</td><td><span id="porfit">10000</span>元</td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" style="font-size: 20px;">
+            项目详情：
+        </div>
+        <table class="table">
+            <tr>
+                <td>项目名称：<span id="">嘉实一号</span></td>
+                <td>项目金额：<span id="">10000</span>元</td>
+            </tr>
+            <tr>
+                <td>还款方式：<span id="">到期还本付息</span></td>
+                <td>保障方式：<span id="">风险备用金</span></td>
+            </tr>
+            <tr>
+                <td>起投金额：<span id="">10000</span>元</td>
+                <td>递增金额：<span id="">1000</span>元</td>
+            </tr>
+
+        </table>
+    </div>
+
+    <div class="panel panel-default">
+        <table class="table">
+            <tr>
+                <td>
+                    <button class="btn btn-default" type="submit" id="button_minus">
+                        <span class="glyphicon glyphicon-minus"></span>
+                    </button>
+                    <span id="mount_count">1000</span>
+                </td>
+                <td>
+                    <button class="btn btn-default" type="submit" id="button_plus">
+                        <span class="glyphicon glyphicon-plus"></span>
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>预期收益：<span>1000</span>元</td>
+                <td>可用余额：<span>1000</span>元</td>
+            </tr>
+        </table>
+        <div class="panel-body" id="">
+            <button class="btn btn-block" id="invest_btn">我要投资</button>
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div class="panel-heading" style="font-size: 20px;">
+            企业信息：
+        </div>
+        <div class="panel-body" id="">
+            “铜板街”成立于2012年9月，是国内首家综合理财交易平台。在铜板街，
+            用户可根据自己的需求和风险承受能力选择合适的理财产品，
+            并通过移动客户端或网站完成产品购买、收益查询、资产转让、资产赎回等操作。
+        </div>
+    </div>
+
+
+</body>
+</html>

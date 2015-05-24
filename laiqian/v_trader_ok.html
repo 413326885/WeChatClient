@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<title>操盘确认</title>
+	<link rel="stylesheet" href="./css/reset.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/common.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/trader.css?ver=version20141104">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<script type="text/javascript" src="./js/jquery.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/iScroll.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/common.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/ichartjs.base.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/ichartjs.pie.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/v_trader.js?ver=version20141104"></script>
+</head>
+<body>
+	<header>
+		<a class="back_icon"></a><h1 class="title">操盘确认</h1>
+	</header>
+	<section>
+		<div class="pic_box">
+			<div id='pic_div'></div>
+			<div class="txt">本次配置</div>
+		</div>
+		<div class="percent_box">
+			<div class="item">
+				<h6 class="title"><span class="item1">货币基金</span></h6>
+				<p class="num" id="moneyper">30%</p>
+			</div>
+			<div class="item">
+				<h6 class="title"><span class="item2">债券基金</span></h6>
+				<p class="num" id="bondper">35%</p>
+			</div>
+			<div class="item">
+				<h6 class="title"><span class="item3">股票基金</span></h6>
+				<p class="num" id="stockper">35%</p>
+			</div>
+		</div>
+		<div class="info_prompt">
+			<p>*由于市场波动，最终配置结果可能和您提交的有微小差别</p>
+		</div>
+		<div class="t_btn_box">
+			<a class="back_btn" id="js_back">返回修改</a>
+			<a class="ok_btn" id="js_trader_ok_btn">确认提交</a>
+		</div>
+	</section>
+</body>
+</html>

@@ -1,0 +1,178 @@
+@charset "UTF-8";
+section {
+	background-color: #f1f1f1;
+}
+.banner {
+	width: 100%;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+.banner img {
+	width: 100%;
+	display: block;
+	margin: 0 auto;
+	max-width: 640px;
+}
+.list_box {
+	width: 95.94%;
+	margin: 0 auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	background: url(../images/square/list_bg.png) repeat-x 0 0;
+	padding-top: 6px;
+	margin-top: 0.5em;
+}
+.list {
+	border-left: 1px solid #cbcbcb;
+	border-right: 1px solid #cbcbcb;
+	border-bottom: 2px solid #ffb239;
+	box-shadow: 0 1px 1px #cbcbcb;
+	line-height: 3em;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 0 0.3em;
+	font-size: 12px;
+	overflow: hidden;
+    background-color: #FFF;
+}
+.list li {
+	overflow: hidden;
+	border-top: 1px dashed #d0d0d0;
+}
+.list li:first-child {
+	border-top: 0 none;
+}
+.list .title {
+	max-width: 4em;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	float: left;
+	margin-right: 0.5em;
+	margin-left: 0.5em;
+	color: #666666;
+}
+.list .content {
+	float: left;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-webkit-text-overflow: ellipsis;
+	color: #000000;
+}
+.list .time {
+	float: right;
+	padding-right: 0.5em;
+	color: #999999;
+}
+.list .money {
+	font-size: 15px;
+	color: #e73113;
+	padding: 0 0.2em 0 0.1em;
+}
+.list li:first-child {
+	background: url(../images/square/new_icon.png) no-repeat 0.5em 0.5em;
+	background-size: auto 1em;
+	padding-top: 0.7em;
+}
+
+
+
+#wrapper_probe {
+    position: absolute;
+    z-index: 1;
+    top: 44px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    overflow: hidden;
+}
+#scroller section {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+#scroller {  
+    position: absolute;  
+    z-index: 1;  
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);  
+    width: 100%;  
+    -webkit-transform: translateZ(0);  
+    -moz-transform: translateZ(0);  
+    -ms-transform: translateZ(0);  
+    -o-transform: translateZ(0);  
+    transform: translateZ(0);  
+    -webkit-touch-callout: none;  
+    -webkit-user-select: none;  
+    -moz-user-select: none;  
+    -ms-user-select: none;  
+    user-select: none;  
+    -webkit-text-size-adjust: none;  
+    -moz-text-size-adjust: none;  
+    -ms-text-size-adjust: none;  
+    -o-text-size-adjust: none;  
+    text-size-adjust: none;  
+}
+#pullDown,#pullUp {    
+    height: 40px;    
+    line-height: 40px;    
+    padding: 5px 10px;    
+    font-weight: bold;    
+    font-size: 14px;    
+    color: #888;
+    display: none;
+    text-align: center;
+}    
+
+#pullDown .pullDownIcon,#pullUp .pullUpIcon {    
+    display: block;    
+    float: left;    
+    width: 40px;    
+    height: 40px;    
+    -webkit-background-size: 40px 80px;    
+    background-size: 40px 80px;    
+    -webkit-transition-property: -webkit-transform;    
+    -webkit-transition-duration: 250ms;
+    display: none;
+}    
+    
+#pullDown .pullDownIcon {    
+    -webkit-transform: rotate(0deg) translateZ(0);    
+}    
+    
+#pullUp .pullUpIcon {    
+    -webkit-transform: rotate(-180deg) translateZ(0);    
+}    
+    
+#pullDown.flip .pullDownIcon {    
+    -webkit-transform: rotate(-180deg) translateZ(0);    
+}    
+    
+#pullUp.flip .pullUpIcon {    
+    -webkit-transform: rotate(0deg) translateZ(0);    
+}    
+    
+#pullDown.loading .pullDownIcon,#pullUp.loading .pullUpIcon {    
+    background-position: 0 100%;    
+    -webkit-transform: rotate(0deg) translateZ(0);    
+    -webkit-transition-duration: 0ms;    
+    -webkit-animation-name: loading;    
+    -webkit-animation-duration: 2s;    
+    -webkit-animation-iteration-count: infinite;    
+    -webkit-animation-timing-function: linear;    
+}
+.pullDownLabel,.pullUpLabel {
+    text-align: center;
+}
+    
+.-webkit-keyframes loading {    
+    from {     
+        -webkit-transform:rotate(0deg)translateZ(0);    
+    }    
+    
+    .to {    
+        -webkit-transform: rotate(360deg) translateZ(0);    
+    }    
+} 

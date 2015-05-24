@@ -1,0 +1,27 @@
+
+
+#logo {
+	position: absolute;
+	top: 6px;
+	left: 4px;
+}
+
+#title {
+	position: absolute;
+	top: 8px;
+	font-size: 20px;
+	margin-left: -18px;
+}
+
+#navbar {
+	background: #FFF;
+}
+
+#invest_form {
+    margin-left: 16px;
+    margin-right: 16px;
+}
+
+#cancel {
+    background-color: #FFF;
+}

@@ -1,0 +1,28 @@
+
+
+#logo {
+	position: absolute;
+	top: 6px;
+	left: 4px;
+}
+
+#title {
+	position: absolute;
+	top: 8px;
+	font-size: 20px;
+	margin-left: -36px;
+}
+
+#navbar {
+	background: #FFF;
+}
+
+#trade_success_form {
+    padding-left: 20px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+#view_invests {
+    background-color: #FFF;
+}

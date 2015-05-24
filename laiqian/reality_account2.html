@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<title>转入真实账户</title>
+	<link rel="stylesheet" href="./css/reset.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/common.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/reality_account.css?ver=version20141104">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<script type="text/javascript" src="./js/jquery.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/iScroll.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/common.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/reality_account.js?ver=version20141104"></script>
+</head>
+<body style="height:auto;">
+	<header>
+		<a class="back_icon"></a><h1 class="title">转入真实账户</h1>
+	</header>
+	<!-- <div id="wrapper"> -->
+		<section class="reality_account2">
+			<div class="content_box">
+				<div class="step_box">
+					<div class="identity identity2">
+						<span class="icon"></span>身份验证
+					</div>
+					<div class="info info2">
+						<span class="icon">2</span>填写信息
+					</div>
+				</div>
+				<div class="input select">
+					<select name="" id="js_bank_list">
+						<option value="0">选择银行</option>
+					</select>
+				</div>
+				<div class="input"><input type="text" id="card_num" placeholder="卡号"></div>
+				<div class="input"><input type="text" id="tel_num" placeholder="手机号码"></div>
+				<div class="input verify_code"><input id="code_num" class="code" type="text" placeholder="请输入验证码"><a id="js_get_code">获取验证码</a></div>
+				<div class="input"><input type="password" id="password1" placeholder="请设置来钱交易密码"></div>
+				<div class="input"><input type="password" id="password2" placeholder="请确认来钱交易密码"></div>
+				<div class="like_box">
+					<h4 class="title">我喜欢</h4>
+					<p class="content">
+						<span class="item"><input type="radio" class="radio" name="like" id="like1" value="3"><label for="like1">高风险高收益</label></span>
+						<span class="item"><input type="radio" class="radio" name="like" id="like2" value="2" checked><label for="like2">中风险中收益</label></span>
+						<span class="item"><input type="radio" class="radio" name="like" id="like3" value="1"><label for="like3">低风险低收益</label></span>
+					</p>
+				</div>
+				<div class="serve"><input type="checkbox" class="checkbox" id="agree" checked><label for="agree">我已阅读并同意</label><a href="serviceAgreement.html">服务协议</a></div>
+				<div class="submit"><a id="js_account2_submit">填好啦</a></div>
+			</div>
+		</section>
+	<!-- </div> -->
+</body>
+</html>

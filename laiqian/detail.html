@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<title>明细</title>
+	<link rel="stylesheet" href="./css/reset.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/common.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/detail.css?ver=version20141104">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<script type="text/javascript" src="./js/jquery.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/common.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/iscroll-probe.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/detail.js?ver=version20141104"></script>
+</head>
+<body>
+	<header style="display:block;">
+		<!-- <a class="back_icon"></a> --><h1 class="title"><span id="js_select_btn">全部明细</span></h1>
+	</header>
+	<div id="wrapper_probe">
+		<div id="scroller">
+			<div id="pullDown" class="ub ub-pc c-gra">  
+				<div class="pullDownIcon"></div>  
+				<div class="pullDownLabel">下拉刷新</div>  
+			</div>  
+			<section>
+				<div class="js_content_box" id="all_content">
+					<div class="list select">
+						<div class="list_title"><span class="m">操作</span><h5 class="d">明细（元）</h5><span class="s">交易状态</span></div>
+						<ul class="list_box" id="js_list_box">
+							<li>加载中...</li>
+						</ul>
+					</div>
+					<div class="list">
+						<div class="list_title"><span class="m">操作</span><h5 class="d">明细（元）</h5><span class="s">交易状态</span></div>
+						<ul class="list_box">
+							<li>加载中...</li>
+						</ul>
+					</div>
+					<div class="list">
+						<div class="list_title"><span class="m">操作</span><h5 class="d">明细（元）</h5><span class="s">交易状态</span></div>
+						<ul class="list_box">
+							<li>加载中...</li>
+						</ul>
+					</div>
+					<div class="list">
+						<div class="list_title"><span class="m">操作</span><h5 class="d">明细（元）</h5><span class="s">交易状态</span></div>
+						<ul class="list_box">
+							<li>加载中...</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 我的来钱 -->
+				<div class="js_content_box" id="my_content">
+					<div class="list select">
+						<div class="list_title"><span class="m">操作</span><h5 class="d">明细（元）</h5><span class="s">交易状态</span></div>
+						<ul class="list_box">
+							<li>加载中...</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 我的投入 -->
+				<div class="js_content_box" id="put_content">
+					<div class="list select">
+						<div class="list_title"><span class="m">操作</span><h5 class="d">明细（元）</h5><span class="s">交易状态</span></div>
+						<ul class="list_box">
+							<li>加载中...</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 我的取出 -->
+				<div class="js_content_box" id="get_content">
+					<div class="list select">
+						<div class="list_title"><span class="m">操作</span><h5 class="d">明细（元）</h5><span class="s">交易状态</span></div>
+						<ul class="list_box">
+							<li>加载中...</li>
+						</ul>
+					</div>
+				</div>
+				<!-- 其他 -->
+				<div class="js_content_box" id="other_content">
+					<div class="list select">
+						<div class="list_title"><span class="m">操作</span><h5 class="d">明细（元）</h5><span class="s">交易状态</span></div>
+						<ul class="list_box">
+							<li>加载中...</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<div id="pullUp" class="ub ub-pc c-gra">  
+				<div class="pullUpIcon"></div>  
+				<div class="pullUpLabel">上拉显示更多...</div>  
+			</div> 
+		</div>
+	</div>
+	<div class="detail_mask" style="display:none;">
+		<div class="pop_list">
+			<div class="item all" data-box="#all_content"><input type="radio" class="detail_radio" name="detail_radio" id="all" value="4" checked><label for="all">全部明细</label></div>
+			<div class="item my" data-box="#my_content"><input type="radio" class="detail_radio" name="detail_radio" id="my" value="3"><label for="my">我的来钱</label></div>
+			<div class="item put" data-box="#put_content"><input type="radio" class="detail_radio" name="detail_radio" id="put" value="0"><label for="put">我的投入</label></div>
+			<div class="item get" data-box="#get_content"><input type="radio" class="detail_radio" name="detail_radio" id="get" value="1"><label for="get">我的取出</label></div>
+			<div class="item other" data-box="#other_content"><input type="radio" class="detail_radio" name="detail_radio" id="other" value="2"><label for="other">其他明细</label></div>
+		</div>
+	</div>
+</body>
+</html>

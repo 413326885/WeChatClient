@@ -1,0 +1,268 @@
+@charset "UTF-8";
+
+section {
+	border: 1px solid #f1f1f1;
+	margin: 0 auto;
+	width: 93.75%;
+}
+.submit {
+	margin-top: 2.2em;
+}
+.prompt {
+	margin-top: 1.6em;
+	color: #383838;
+	font-style: 12px;
+	text-align: center;
+}
+.prompt span.b {
+	padding: 0.4em;
+	line-height: 1em;
+	width: 1em;
+	height: 1em;
+	text-align: center;
+	display: inline-block;
+	background-color: #ff5e3a;
+	color: #FFF;
+	border-radius: 100px;
+	font-style: 12px;
+}
+.step_box {
+	width: 62.5%; /* 400px */
+	margin: 10px auto 10px;
+	height: 28px;
+	line-height: 28px;
+	background-color: #1e91c2;
+	border-radius: 28px;
+	color: #FFF;
+}
+.step_box .identity {
+	width: 50%;
+	text-align: center;
+	float: left;
+}
+.step_box .info {
+	width: 50%;
+	text-align: center;
+	float: right;
+	line-height: 28px;
+}
+.step_box .icon {
+	float: left;
+	width: 24px;
+	height: 24px;
+	line-height: 24px;
+	background-color: #FFF;
+	border: 2px solid #1e91c2;
+	border-radius: 28px;
+	color: #000;
+	box-shadow: 0 0 1px #999,0 0 0 2px #FFF;
+}
+
+/*第二步*/
+.reality_account2 {
+	width: 100%;
+	padding-bottom: 0;
+}
+.reality_account2 div.content_box{
+	width: 93.75%;
+	margin: 0 auto;
+	height: 100%;
+}
+.identity2 {
+	background-color: #bcd9e5;
+	border-radius: 28px 0 0 28px;
+	padding-right: 20px;
+}
+.info2 {
+	margin-left: -20px;
+}
+.identity2 .icon {
+	border-color: #bcd9e5;
+	background: url(../images/common/ionc_ok.png) no-repeat center center;
+	background-size: 70% auto;
+	background-color: #cde3ec;
+	box-shadow: 0 0 0 2px #FFF;
+}
+.select {
+	overflow: hidden;
+	background: url(../images/common/slide_icon.png) no-repeat 96% center #FFF;
+	background-size: 20px auto;
+	padding: 0 0.5em;
+}
+.select select {
+	width: 120%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: 0;
+	background: none;
+	color: #9f9f9f;
+}
+.select select:focus {
+	outline: none;
+}
+.input input[type="text"]:disabled{
+	background:#FFF;
+}
+.serve {
+	margin-top: 1.2em;
+}
+.serve a {
+	color: #f8370a;
+}
+.like_box {
+	margin: 1.2em -3.334% 0 -3.334%;
+	background: url("../images/profit_query/account_bg.png") no-repeat scroll left bottom / 100% auto rgba(0, 0, 0, 0);
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 2em;
+	border-bottom: 1px solid #dcdcdc;
+}
+.like_box .title {
+	width: 93.33%;
+	margin: 0 auto;
+	color: #1778b4;
+	background: url(../images/reality_account/like_icon.png) no-repeat left center;
+	font-size: 14px;
+	background-size: 1.2em auto;
+	padding-left: 1.6em;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+.like_box .content {
+	padding-top: 0.8em;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: flex;
+	width: 93.33%;
+	margin: 0 auto;
+}
+.like_box .content .item {
+	flex: 1;
+	-webkit-flex: 1;
+	-moz-flex: 1;
+}
+
+footer {
+	position: static;
+}
+footer a {
+	background-color: #ffb628;
+	color: #FFF;
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	font-size: 16px;
+	font-weight: bold;
+	text-align: center;
+	text-decoration: none;
+}
+
+/*完善个人信息*/
+.new_card {
+	margin-top: 2em;
+}
+.has_card_box {
+	width: 93.75%;
+	margin: 1em auto 0;
+}
+.card_check {
+	color: #303030;
+	font-size: 14px;
+}
+.card_list_box {
+	border-top: 1px solid #c8c8c8;
+	border-bottom: 1px solid #c8c8c8;
+	margin-top: 0.5em;
+	position: relative;
+	background-color: #FFF;
+	height: 50px;
+	line-height: 50px;
+}
+.card_list_box .val_box {
+	width: 93.75%;
+	margin: 0 auto;
+}
+.card_name {
+	padding-left: 2em;
+	height: 50px;
+	line-height: 50px;
+	overflow: hidden;
+	padding-left: 48px;
+	background-repeat: no-repeat;
+	background-position: 10px center;
+	background-size: 34px auto;
+}
+.card_name .name {
+	font-size: 16px;
+	display: block;
+	position: relative;
+	top: 50%;
+	margin-top: -17px;
+	padding-bottom: 16px;
+	height: 18px;
+	line-height: 18px;
+}
+.val_box .card_name .name {
+	background: url(../images/common/slide_icon.png) no-repeat 96% center #FFF;
+	background-size: 20px auto;
+}
+.card_name .name .num {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 16px;
+	line-height: 16px;
+	font-size: 12px;
+	font-style: normal;
+	color: #a8a8a8;
+}
+.select_list_box {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 99;
+	width: 100%;
+	background-color: #FFF;
+	border-bottom: 1px solid #c8c8c8;
+}
+.select_list_box li {
+	width: 93.75%;
+	margin: 0 auto;
+	position:relative;
+}
+input.card_list {
+	display: none;
+}
+input.card_list ~ label {
+	width: 100%;
+	height: 50px;
+	line-height: 50px;
+}
+input.card_list ~ label::after {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -8px;
+	width: 10px;
+	height: 10px;
+	background-color: #FFF;
+	border-radius: 10em;
+	content: '';
+	border: 3px solid #FFF;
+	box-shadow: 0 0 0 5px #FFF, 0 0 0 6px #e1e1e1;
+}
+/* input.card_list:checked ~ label::after {
+	background-color: #1e91c2;
+	border: 3px solid #d7f3ff;
+	box-shadow: 0 0 0 5px #FFF, 0 0 0 6px #8fd4f2;
+} */
+input.card_list ~ label.checked::after {
+	background-color: #1e91c2;
+	border: 3px solid #d7f3ff;
+	box-shadow: 0 0 0 5px #FFF, 0 0 0 6px #8fd4f2;
+}
+label.checked::after {
+	background-color: #1e91c2 !important;
+	border: 3px solid #d7f3ff !important;
+	box-shadow: 0 0 0 5px #FFF, 0 0 0 6px #8fd4f2 !important;
+}

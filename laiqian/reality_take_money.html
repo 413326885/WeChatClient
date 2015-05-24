@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ch">
+<head>
+	<meta charset="UTF-8">
+	<title>取出</title>
+	<link rel="stylesheet" href="./css/reset.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/common.css?ver=version20141104">
+	<link rel="stylesheet" href="./css/take_money.css?ver=version20141104">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no"/>
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="pragma" content="no-cache">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<script type="text/javascript" src="./js/jquery.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/md5.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/iScroll.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/common.js?ver=version20141104"></script>
+	<script type="text/javascript" src="./js/reality_take_money.js?ver=version20141104"></script>
+</head>
+<body class="take" style="height:auto;min-height:100%;">
+	<header>
+		<a class="back_icon"></a><h1 class="title">取出</h1>
+	</header>
+	<!-- <div id="wrapper"> -->
+		<section>
+			<div class="card_box">
+				<div class="title">
+					<span class="num" id="js_card_num">**** **** **** ****</span><h3 id="js_title"></h3>
+				</div>
+				<div class="content">
+					<h5 class="count_title">总财富（元）</h5>
+					<p class="count_num" id="js_count_num">00.00</p>
+				</div>
+			</div>
+			<div class="input_box">
+				<div class="input_c">
+					<span class="title title_amount">金额（元）</span><input id="amount" class="num" type="text" placeholder="请输入取出金额">
+				</div>
+			</div>
+			<div class="take_btn"><a id="js_take_ok">我要取出</a></div>
+		</section>
+	<!-- </div> -->
+	<footer><a id="js_take_all">一键全部取出<i></i></a></footer>
+	<div class="pop_mask" id="js_take_pop" style="display:none;">
+		<div class="pop">
+			<h2 class="title">来钱提示</h2>
+			<div class="info">
+				<p class="txt">确定从您的来钱账户取出<span class="red" id="value">0</span>元</p>
+				<input class="info_input" type="password" id="password" placeholder="交易密码">
+			</div>
+			<div class="btn_box"><a class="cancel_btn" id="js_cancel_btn">取消</a><a class="ok_btn" id="js_ok_btn">确认</a></div>
+		</div>
+	</div>
+	<div class="pop_mask" id="js_take_pop_all" style="display:none;">
+		<div class="pop">
+			<h2 class="title">来钱提示</h2>
+			<div class="info">
+				<p class="txt">请输入来钱交易密码，完成<span class="red" id="value">全部</span>取出</p>
+				<input class="info_input" type="password" id="password_all" placeholder="交易密码">
+			</div>
+			<div class="btn_box"><a class="cancel_btn" id="js_cancel_btn_all">取消</a><a class="ok_btn" id="js_ok_btn_all">确认</a></div>
+		</div>
+	</div>
+	<div class="pop_mask" id="js_prompt" style="display:none;">
+		<div class="pop">
+			<h2 class="title">来钱提示</h2>
+			<div class="info">
+				<p class="txt">部分退出后账户余额应高于<span class="red">100</span>元。<br>建议您修改取出金额或全部取出。</p>
+			</div>
+			<div class="btn_box"><a class="one_ok_btn">我知道了</a></div>
+		</div>
+	</div>
+</body>
+</html>

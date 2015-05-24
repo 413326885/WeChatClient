@@ -1,0 +1,155 @@
+@charset "UTF-8";
+section .title {
+	font-size: 14px;
+	padding-left: 1.4em;
+}
+section a {
+	text-decoration: none;
+}
+.yesterday {
+	width: 93.75%;
+	margin: 0.6em auto 0;
+	position: relative;
+}
+.yesterday .title {
+	color: #5f6467;
+	background: url(../images/profit_query/time_icon.png) no-repeat left center;
+	background-size: 1.2em auto;
+	line-height: 1.8em;
+}
+.yesterday .money {
+	background: url(../images/profit_query/more_icon_01.png) no-repeat right center;
+	background-size: 10px auto;
+	font-size: 46px;
+	color: #ff5e3a;
+	line-height: 2.4em;
+}
+.yesterday .icon_box {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 100%;
+}
+.yesterday .icon_box li {
+	float: right;
+	text-align: center;
+	margin-left: 2em;
+	color: #000;
+}
+.yesterday .icon_box .icon {
+	font-style: normal;
+	font-size: 14px;
+	border-radius: 5em;
+	display: inline-block;
+	line-height: 1em;
+	padding: 0.3em;
+	text-align: center;
+	color: #fff;
+}
+.yesterday .icon_box .icon1 {
+	background-color: #67c93c;
+}
+.yesterday .icon_box .icon2 {
+	background-color: #ffb628;
+}
+.yesterday .icon_box .icon3 {
+	background-color: #e93b32;
+}
+.yesterday .icon_box .num {
+	display: block;
+	font-size: 14px;
+}
+
+
+.money_count {
+	background-color: #53b3df;
+}
+.money_count .box {
+	padding-top: 1.4em;
+	width: 93.75%;
+	margin: 0 auto;
+}
+.money_count .title {
+	color: #fff;
+	background: url(../images/common/money_icon.png) no-repeat left center;
+	background-size: 1.2em auto;
+	line-height: 1.8em;
+}
+.money_count .money {
+	background: url(../images/profit_query/more_icon_02.png) no-repeat right center;
+	background-size: 10px auto;
+	font-size: 36px;
+	color: #FFF;
+	line-height: 2.4em;
+}
+
+.account {
+	background: url(../images/profit_query/account_bg.png) no-repeat left bottom;
+	background-size: 100% auto;
+	border-bottom: 1px solid #dcdcdc;
+	padding-bottom: 2em;
+}
+.account .box {
+	width: 93.75%;
+	margin: 0 auto;
+	padding-top: 1em;
+	background: url(../images/profit_query/more_icon_03.png) no-repeat right center;
+	background-size: 10px auto;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding-right: 1.4em;
+}
+.account .title {
+	background: url(../images/profit_query/user_icon.png) no-repeat left center;
+	background-size: 1.2em auto;
+	line-height: 1.8em;
+}
+.account a,
+.account .content {
+	color: #383838;
+}
+.account .content {
+	margin-top: 0.5em;
+	line-height: 2em;
+}
+.account .content .icon {
+	font-style: normal;
+	padding: 0.4em;
+	border-radius: 4em;
+	background-color: #ff5e3a;
+	color: #FFF;
+	line-height: 1em;
+	display: inline-block;
+	min-width: 1em;
+	height: 1em;
+	text-align: center;
+}
+
+/*真实查询*/
+.reality_query_btn {
+	font-size: 16px;
+	width: 93.75%;
+	margin: 1.8em auto 0;
+}
+.reality_query_btn .take_btn,
+.reality_query_btn .put_btn {
+	height: 44px;
+	width: 48%;
+	display: inline-block;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	text-align: center;
+	border-radius: 3px;
+}
+.reality_query_btn .take_btn {
+	float: left;
+	line-height: 42px;
+	color: #1e91c2;
+	border: 1px solid #c2c2c2;
+}
+.reality_query_btn .put_btn {
+	float: right;
+	line-height: 44px;
+	color: #FFF;
+	background-color: #ffb628;
+}
