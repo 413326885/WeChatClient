@@ -7,11 +7,17 @@
     <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <script src="http://www.5xsj.net/jQuery/js/jquery.timer.js"></script>
 
     <link href="./css/register.css" rel="stylesheet">
+    <link href="./css/common.css" rel="stylesheet">
+
     <script src="./js/iScroll.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/subjects.js"></script>
+    <script src="./js/captcha.js"></script>
+    <script src="./js/countdownTimer.js"></script>
+    <script src="./js/register.js"></script>
+    <script src="./js/send_phone_code.js"></script>
 </head>
 
 <body>
@@ -24,39 +30,40 @@
     </nav>
 
     <form role="form" id="register_form">
-        <div class="form-group" id="username">
-            <input class="form-control input-default" id="focusedInput" type="text"
+        <div class="form-group">
+            <input class="form-control input-default" id="username" type="text"
                    placeholder="用户名">
         </div>
 
-        <div class="form-group" id="password">
-            <input class="form-control input-default" type="password"
+        <div class="form-group">
+            <input class="form-control input-default" id="password" type="password"
                    placeholder="密码">
         </div>
 
         <div class="form-group">
-            <div class="input-group input-group-default" id="image_code">
-                <input type="text" class="form-control" placeholder="图形验证码" style="width: 66%;">
-                <img src="https://test.quboqu.com/ums/captcha" style="width: 34%;">
+            <div class="input-group input-group-default">
+                <input type="text" class="form-control" id="image_code" placeholder="图形验证码" style="width: 66%;">
+                <img src="https://test.quboqu.com/ums/captcha" id="image_captcha" style="width: 34%;" alt="captcha">
             </div>
         </div>
 
         <div class="form-group">
-            <div class="input-group input-group-default" id="phonenum">
-                <input type="text" class="form-control" placeholder="手机号码">
-                <span class="input-group-addon btn">发送验证码</span>
+            <div class="input-group input-group-default">
+                <input type="text" class="form-control" id="phonenum" placeholder="手机号码">
+                <span class="input-group-addon btn" id="send_phone_code">发送验证码</span>
             </div>
+            <!--<button id="set_phone_code">发送验证码</button>-->
         </div>
 
-        <div class="form-group" id="phone_code">
-            <input class="form-control input-default" type="text"
+        <div class="form-group">
+            <input class="form-control input-default" id="phone_code" type="text"
                    placeholder="验证码">
         </div>
 
         <div class="form-group">
             <div class="checkbox">
                 <label>
-                    <input type="checkbox" checked> 我已阅读并同意
+                    <input type="checkbox" id="agreement" checked> 我已阅读并同意
                     <a href="">《网站服务协议》</a>
                 </label>
             </div>
@@ -64,8 +71,8 @@
 
     </form>
 
-    <div class="panel-body" id="">
-        <button class="btn btn-block" id="invest_btn">完成注册</button>
+    <div class="panel-body">
+        <button class="btn btn-block"  id="register_btn">完成注册</button>
     </div>
 </body>
 </html>

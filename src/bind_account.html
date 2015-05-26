@@ -8,10 +8,11 @@
     <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
     <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
 
+    <link href="./css/common.css" rel="stylesheet">
     <link href="./css/bind_account.css" rel="stylesheet">
     <script src="./js/iScroll.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/subject_detail.js"></script>
+    <script src="./js/bind_account.js"></script>
 </head>
 
 <body>
@@ -24,23 +25,23 @@
     </nav>
 
     <form role="form" id="bind_form">
-        <div class="form-group" id="username">
-            <input class="form-control input-default" id="focusedInput" type="text"
+        <div class="form-group">
+            <input class="form-control input-default" id="username" type="text"
                    placeholder="用户名">
         </div>
 
-        <div class="form-group" id="password">
-            <input class="form-control input-default" type="password"
+        <div class="form-group">
+            <input class="form-control input-default" id="password" type="password"
                    placeholder="密码">
         </div>
     </form>
 
-    <div class="panel-body" id="">
-        <button class="btn btn-block" id="invest_btn">开启免登陆模式</button>
+    <div class="panel-body">
+        <button class="btn btn-block" id="bind_account">开启免登陆模式</button>
     </div>
 
-    <div class="panel-body" id="">
-        <button class="btn btn-block" id="invest_btn">未注册</button>
+    <div class="panel-body">
+        <a class="link_btn" href="./register.html"><button class="btn btn-block">未注册</button></a>
     </div>
 </body>
 </html>

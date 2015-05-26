@@ -1,8 +1,6 @@
 
 (function() {
-
   'use strict';
-
   $.fn.captcha = function() {
     $(this).on('click', function() {
       var $this = $(this);
@@ -11,6 +9,6 @@
   };
 
   $(function() {
-    $('.js-captcha').captcha();
+    $("#image_captcha").captcha();
   });
 })();

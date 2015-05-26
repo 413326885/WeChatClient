@@ -13,111 +13,6 @@ a {
     text-decoration: none;
 }
 
-header{
-    height: 44px;
-    line-height: 44px;
-    width: 100%;
-    background: #1e91c2;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    display: none;
-}
-
-header .title {
-    height: 44px;
-    line-height: 44px;
-    width: 100%;
-    text-align: center;
-    font-size: 18px;
-    color: #fff;
-    vertical-align: middle;
-}
-
-.input {
-    height: 50px;
-    line-height: 50px;
-    margin-top: 10px;
-    border-radius: 3px;
-    min-height: 40px;
-}
-
-.input input {
-    min-height: 40px;
-    height: 100%;
-    border: 0 none;
-    margin-top: 0;
-    padding-top: 0;
-    width: 100%;
-    box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    padding: 0 0.5em;
-    color: #666666;
-}
-
-input,select {
-    font-size: 16px;
-}
-
-.verify_code {
-    background: #fff;
-}
-.verify_code input {
-    width: 66.68%;
-}
-.verify_code a{
-    width: 33.22%; /*196*/
-    height: 100%;
-    display: inline-block;
-    vertical-align: middle;
-    font-size: 14px;
-    background: #1e91c2;
-    border-radius: 3px;
-    float: right;
-    text-align: center;
-    color: #FFF;
-    font-size: 14px;
-    text-decoration: none;
-}
-
-input.checkbox {
-	display: none;
-}
-input.checkbox ~ label {
-	background: url(../images/common/checkbox.png) no-repeat left center;
-	background-size: 1.2em auto;
-	padding-left: 1.5em;
-	padding-top: 0.1em;
-}
-input.checkbox:checked ~ label {
-	background: url(../images/common/checkbox_checked.png) no-repeat left center;
-	background-size: 1.2em auto;
-}
-input.checkbox ~ label.checked {
-	background: url(../images/common/checkbox_checked.png) no-repeat left center;
-	background-size: 1.2em auto;
-}
-
-.submit {
-	margin-top: 20px;
-	height: 50px;
-	line-height: 50px;
-	min-height: 40px;
-}
-.submit a {
-	width: 100%;
-	height: 100%;
-	display: inline-block;
-	background-color: #ffb628;
-	text-decoration: none;
-	color: #FFF;
-	text-align: center;
-	border-radius: 3px;
-	font-size: 16px;
-	font-weight: bold;
-}
-
 .pop_mask {
 	position: absolute;
 	top: 0;
@@ -148,7 +43,7 @@ input.checkbox ~ label.checked {
 	font-size: 14px;
 }
 .info .txt {
-	margin: 1.2em 0;
+	margin: 1.2em 1.2em;
 	line-height: 1.6em;
 }
 .info .red {
@@ -195,4 +90,9 @@ input.checkbox ~ label.checked {
 	color: #157efb;
 	text-align: center;
 	font-size: 16px;
+}
+
+.link_btn {
+	color:#F44E3F;
+	text-decoration:none;
 }
