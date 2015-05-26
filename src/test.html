@@ -1,64 +1,288 @@
-<!--<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">-->
-<!--<html>-->
-<!--<head>-->
-    <!--<meta charset="UTF-8">-->
-    <!--<title>test</title>-->
-    <!--<script type="text/javascript">  -->
-        <!--function reImg(){  -->
-            <!--var img = document.getElementById("Img");  -->
-            <!--img.src = "Img?rnd=" + Math.random();  -->
-        <!--}  -->
-    <!--</script>-->
-<!--</head>-->
-
-<!--<body>-->
-<!--<center>-->
-    <!--<img id="Img" src="Img" alt="验证码"  />-->
-    <!--<a href="#" onclick="reImg();">看不清，换一张</a>-->
-<!--</center>-->
-<!--</body>-->
-<!--</html>-->
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Bootstrap 实例 - 默认的导航栏</title>
-    <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
-    <script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
-    <script src="http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8"/>
+    <link rel="Shortcut Icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="./css/index.css">
+    <title>嘉石榴 - 线上财富管家</title>
+    <script src="/page-dep/uri.js/src/URI.min.js"></script>
+    <script src="/js/ensure_https.js"></script>
+    <!--[if lt IE 9]>
+    <script src="/js/vendor/jquery-1.11.2.min.js"></script>
+    <script src="/page-dep/html5shiv/dist/html5shiv.min.js"></script>
+    <script src="/page-dep/respond/dest/respond.min.js"></script>
+    <![endif]-->
+    <!--[if (gte IE 9) | (!IE)]><!-->
+    <script src="/page-dep/jquery/dist/jquery.min.js"></script>
+    <!--<![endif]-->
+    <script src="/page-dep/bootstrap/dist/js/bootstrap.min.js"></script>
+
+    <script src="/js/enhancements/jquery.placeholder.js"></script>
+    <script>
+      $(function() {
+        $('input[type=password]').placeholder();
+      });
+    </script>
 </head>
-<body>
+<body class="register">
 
-<nav class="navbar navbar-default" role="navigation">
-    <div class="navbar-header">
-        <a class="navbar-brand" href="#">W3Cschool</a>
-    </div>
-    <div>
-        <ul class="nav navbar-nav">
-            <li class="active"><a href="#">iOS</a></li>
-            <li><a href="#">SVN</a></li>
-            <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Java
-                    <b class="caret"></b>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#">jmeter</a></li>
-                    <li><a href="#">EJB</a></li>
-                    <li><a href="#">Jasper Report</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">分离的链接</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">另一个分离的链接</a></li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-</nav>
 
-<div>
-    test
+
+<div class="layout-header">
+
+    <div class="i-links">
+        <div class="i-content">
+            嘉实旗下互联网金融平台
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            客服电话 <span>400-600-8800</span>
+            <div class="pull-right">
+
+                <a class="btn btn-link" href="/login">登录</a>
+                <a class="btn btn-link" href="/register">注册</a>
+
+
+            </div>
+        </div>
     </div>
+
+    <div class="i-menu">
+        <div class="i-content">
+            <div class="col-group">
+                <div class="col col-min">
+                    <a href="/">
+                        <img class="logo" src="/images/logo.jpg" alt="LOGO"/>
+                    </a>
+                </div>
+
+                <div class="col col-12 text-right">
+                    <ul class="nav nav-tabs">
+                        <li id="nav-subjects">
+                            <a href="/">首页</a>
+                        </li>
+                        <li id="nav-products">
+                            <a href="/#products">标的</a>
+                        </li>
+                        <li id="nav-userHome">
+                            <a href="/user/home/overview">个人中心</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="layout-body">
+    <div class="i-content">
+
+        <div class="user-register page-content">
+            <h3 class="text-center">注册新用户</h3>
+
+            <form id="register-notification" class="ws-validate" method="post"
+                  data-form-countdown="true"
+                  action="/ums/users/register/notification"></form>
+            <form id="register" class="ws-validate form-looser form-sm" method="post"
+                  data-form-indirect-target='{
+              "title": "恭喜，已注册成功！",
+              "link_message": "去登录"
+            }'
+                  data-form-target-url="/login"
+                  action="/ums/users/register">
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input class="form-control" type="text" name="name" placeholder="6位以上，只含字母数字，并以字母开头"
+                               autofocus
+                               data-sync-val-to="[type='hidden'][name='name']"
+                               data-username
+                               data-ajaxvalidate="/ums/users/name-check"
+                               data-errormessage='{
+                    "username": "6位以上，只含字母数字，并以字母开头"
+                   }'
+                               required>
+                        <input class="form-control" form="register-notification" type="hidden" name="name" required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input class="form-control" type="password" name="password" placeholder="密码必须为8位以上，并且不能为纯数字"
+                               data-password
+                               required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input class="form-control" type="password" name="confirmed_password:skip" placeholder="请确保两次输入密码完全一致"
+                               data-dependent-validation="password"
+                               data-errormessage-dependent="请确认两次输入的密码一致"
+                               required/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
+                        <input class="form-control" type="text" name="captcha" form="register-notification" placeholder="输入右侧验证码"
+                               data-captcha
+                               required>
+
+                        <div class="input-group-addon input-group-addon-xs">
+                            <img class="js-captcha" form="register-notification" src="/ums/captcha" alt="captcha"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                        <input class="form-control" type="text" name="phone" placeholder="输入你的手机号码"
+                               form="register-notification"
+                               data-sync-val-to="[type='hidden'][name='phone']"
+                               data-phone
+                               data-ajaxvalidate="/ums/users/phone-check"
+                               required>
+                        <input class="hidden" type="hidden" name="phone">
+
+                        <div class="input-group-addon input-group-addon-xs">
+                            <button form="register-notification" type="submit" data-countdown
+                                    class="btn btn-default">发送手机验证码
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                        <input class="form-control" type="text" name="smsVerifyCode" placeholder="输入收到的手机验证码"
+                               data-sms-verify-code
+                               data-errormessage-value-missing="请填写手机验证码"
+                               required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group agreement block">
+                        <input type="checkbox" id="_agreement" required/>
+                        <label for="_agreement">
+                            我已阅读并同意 <a href="/images/register-license.pdf" target="_blank">《“嘉石榴”网站服务协议》</a>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group block error-message">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group block">
+                        <button type="submit" class="btn btn-primary btn-lg full-width">注册用户</button>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="text-center">
+                        已有账号？<a href="/login">立即登录</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+    </div>
+</div>
+
+
+<div class="layout-footer">
+    <div class="footer-content">
+        <div class="footer-links">
+            <div class="col-group">
+                <div class="col col-8">
+                    <div class="col-group">
+                        <div class="col col-4">
+                            <h4><a href="/static/help/us.html">关于嘉石榴</a></h4>
+
+                            <p><a href="/static/help/us/site_intro.html">网站介绍</a></p>
+
+                            <p><a href="/static/help/us/shareholder_intro.html">股东介绍</a></p>
+
+                            <p><a href="/static/help/us/notice_news.html">公告新闻</a></p>
+
+                            <p><a href="/static/help/us/contact_us.html">联系我们</a></p>
+                        </div>
+                        <div class="col col-4">
+                            <h4><a href="/static/help/intro.html">投资指南</a></h4>
+
+                            <p><a href="/static/help/intro/registration_certification.htm">注册认证</a></p>
+
+                            <p><a href="/static/help/intro/recharge_encashment.html">充值取现</a></p>
+
+                            <p><a href="/static/help/intro/product_intro.html">产品介绍</a></p>
+
+                            <p><a href="/static/help/intro/Q-A.html">常见问题</a></p>
+                        </div>
+                        <div class="col col-4">
+                            <h4><a href="/static/help/security.html">安全保障</a></h4>
+
+                            <p><a href="/static/help/security/investment_security.html">投资安全</a></p>
+
+                            <p><a href="/static/help/security/capital_security.html">资金安全</a></p>
+
+                            <p><a href="/static/help/security/it_security.html">信息安全</a></p>
+
+                            <p><a href="/static/help/security/privacy_protection.html">隐私保护</a></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-4 hot-line">
+                    <div>
+                        <h4>客服热线</h4>
+                    </div>
+                    <div>
+                        <span class="text-lg">400-600-8800</span><br>
+                        <small>周一到周五：8:30-21:00</small>
+                        <br/>
+                        <small>周六到周日：9:00-17:00（法定节假日除外）</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <p>
+                嘉实金融信息服务（杭州）有限公司 | 浙ICP备15011626号-2 Copyright 2015 jia16.com, All Rights Reserved
+            </p>
+        </div>
+    </div>
+</div>
+
+<script>var context_path = ""</script>
+<script src="/page-dep/lodash/lodash.min.js"></script>
+<script src="/page-dep/jquery.cookie/jquery.cookie.js"></script>
+
+<script src="/js/global.js"></script>
+<script src="/js/compile.js"></script>
+<script src="/js/ui.js"></script>
+<script src="/js/errorHandler.js"></script>
+<script src="/js/util.js"></script>
+<script src="/js/resource.js"></script>
+<script src="/js/baiduStatistic.js"></script>
+
+<script src="/page-dep/webshim/js-webshim/dev/polyfiller.js"></script>
+<script src="/js/enhancements/validationMessage.js"></script>
+<script src="/js/enhancements/formValidators.js"></script>
+<script src="/js/enhancements/syncValTo.js"></script>
+<script src="/js/enhancements/countdownTimer.js"></script>
+<script src="/js/enhancements/captcha.js"></script>
+<script src="/js/enhancements/ajaxJsonForm.js"></script>
+<script src="/js/enhancements/pager.js"></script>
+
+<script src="/page-dep/jquery-timer/jquery.timer.js"></script>
+<script src="/page-dep/jquery.serializeJSON/jquery.serializejson.min.js"></script>
+<script src="/page-dep/midas.js"></script>
+
+
 
 </body>
 </html>
