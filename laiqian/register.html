@@ -4,38 +4,16 @@
         <meta charset="utf-8">
         <title>虚拟账户注册</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="format-detection" content="telephone=no"/>
-        <meta http-equiv="pragma" content="no-cache">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-        <meta http-equiv="pragma" content="no-cache">
-        <meta http-equiv="cache-control" content="no-cache">
-        <meta http-equiv="expires" content="0">
-        <link href="./css/reset.css?ver=version20141104" rel="stylesheet">
         <link href="./css/common.css?ver=version20141104" rel="stylesheet">
-        <link href="./css/login.css?ver=version20141104" rel="stylesheet">
-        <script type="text/javascript" src="./js/jquery.js?ver=version20141104"></script>
-        <script type="text/javascript" src="./js/md5.js?ver=version20141104"></script>
-        <script type="text/javascript" src="./js/iScroll.js?ver=version20141104"></script>
-        <script type="text/javascript" src="./js/common.js?ver=version20141104"></script>
-        <script type="text/javascript" src="./js/register.js?ver=version20141104"></script>
     </head>
 <body>
     <header>
     	<a class="back_icon"></a><h1 class="title">来个虚拟账户</h1>
     </header>
-    <!-- <div id="wrapper"> -->
-        <section>
-            <div class="input"><input type="text" class="username" placeholder="手机号"></div>
-            <div class="input verify_code register"><input class="code" type="text" placeholder="输入验证码"><a id="js_get_code">获取验证码</a></div>
-            <div class="input"><input class="password1" type="password" placeholder="我的密码"></div>
-            <div class="input"><input class="password2" type="password" placeholder="再次确认"></div>
-            <div class="agreement"><input type="checkbox" id="agree" class="checkbox" checked><label for="agree">我已阅读并同意</label><a href="serviceAgreement.html">用户服务协议</a></div>
-            <div class="submit"><a id="js_submit">填好啦</a></div>
-            <div class="submit"><a href="login_virtual.html">我已注册，前去登录</a></div>
-        </section>
-    <!-- </div> -->
+    <div class="input"><input type="text" class="username" placeholder="手机号"></div>
+    <div class="input verify_code register">
+        <input class="code" type="text" placeholder="输入验证码" style="border:1px solid grey;border-radius:3px">
+        <img src="https://www.jia16.com/ums/captcha">
+    </div>
 </body>
 </html>

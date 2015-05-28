@@ -9,11 +9,11 @@
 	position: absolute;
 	top: 8px;
 	font-size: 20px;
-	margin-left: -38px;
 }
 
 #navbar {
 	background: #FFF;
+	text-align: center;
 }
 
 #bind_form {

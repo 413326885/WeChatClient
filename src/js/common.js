@@ -114,7 +114,7 @@ function showDialog(opts){
  *点击之后的处理中
  */
 function processing(content){
-	var $p=$('<div id="processing"><div class="p_content">'+(content || "，请稍候...")+'</div></div>');
+	var $p=$('<div id="processing"><div class="p_content">'+content+'</div></div>');
 	$p.appendTo('body');
 }
 

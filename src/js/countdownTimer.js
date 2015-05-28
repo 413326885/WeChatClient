@@ -1,14 +1,13 @@
 $(function() {
-
     $.fn.countdown = function() {
         var $this = $(this);
         var originText = $this.text();
         var interval = $this.data('countdown') || 120;
         var deferred = $.Deferred();
         var timer = $.timer(function() {
-        if(interval)
-            $this.text('重新发送(' + interval-- + ')');
-        else {
+        if(interval) {
+             $this.text('重新发送(' + interval-- + ')');
+        } else {
             timer.reset();
             timer.stop();
             $this.text(originText);
@@ -24,7 +23,7 @@ $(function() {
 
     $.fn.sendPhoneCode = function(options){
         var defaultOptions = {
-            ”captcha“: "12345",
+            "captcha": "12345",
             "phone": "18817627117"
         }
         options = $.extend(defaultOptions, options);
@@ -41,5 +40,7 @@ $(function() {
                 }
             }
         });
+
     };
 });
+

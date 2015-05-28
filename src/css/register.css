@@ -10,14 +10,17 @@
 	position: absolute;
 	top: 8px;
 	font-size: 20px;
-	margin-left: -18px;
 }
 
 #navbar {
 	background: #FFF;
 	margin-bottom: 0;
+	text-align: center;
 }
 
 #register_form {
     margin: 16px;
 }
+
+
+

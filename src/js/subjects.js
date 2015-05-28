@@ -1,33 +1,43 @@
 
 $(function() {
 
-//    var data = [
-//        {
-//            subject_name: "飞天茅台1",
-//            subject_profit: 8,
-//            subject_period: 4,
-//            subject_total_amount: 10000,
-//            subject_init_amount: 1000
-//        },
-//        {
-//            subject_name: "飞天茅台2",
-//            subject_profit: 18,
-//            subject_period: 14,
-//            subject_total_amount: 100001,
-//            subject_init_amount: 10001
-//        }
-//    ];
+    var data = [
+        {
+            subject_name: "飞天茅台1",
+            subject_profit: 8,
+            subject_period: 4,
+            subject_total_amount: 10000,
+            subject_init_amount: 1000
+        },
+        {
+            subject_name: "飞天茅台2",
+            subject_profit: 18,
+            subject_period: 14,
+            subject_total_amount: 100001,
+            subject_init_amount: 10001
+        }
+    ];
 
 
-//    //添加subjects
-//    $("#add_subjects_list").on('click', function() {
-//
-//        $.each(data, function(index, val) {
-//            addSubjectToFront(val);
-//        });
-//    });
+    //添加subjects
+    $("#add_subjects_list").on('click', function() {
 
-    querySubjectsFromServer();
+        $.each(data, function(index, val) {
+            addSubjectToFront(val);
+        });
+    });
+
+    //个人中心
+    $("#user_center_btn").on('click', function() {
+
+        if(isAccountBinded) {
+            window.open("./bind_account.html");
+        } else {
+            window.open("./user_center.html");
+        }
+    });
+
+//    querySubjectsFromServer();
 
 });
 
@@ -50,10 +60,10 @@ function querySubjectsFromServer() {
             } else {
                 myAlert(data.errmsg, function(){
                     if(data.errcode == "400000") {
-                        document.location.href="400.html";
+                        window.open("./register.html");
                     }
                     if(data.errcode == "500000") {
-                        document.location.href="500.html";
+                        window.open("./register.html");
                     }
                 });
             }
@@ -75,7 +85,7 @@ function addSubjectToFront(subject) {
 
     var $desc = $('<div class="panel panel-default">\
             <div class="panel-heading" id="subject_title">\
-                '+ subject.subject_name +'\
+                <a href="">'+ subject.subject_name +'</a>\
             </div>\
             <table class="table">\
                 <tr>\

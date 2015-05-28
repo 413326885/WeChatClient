@@ -96,3 +96,67 @@ a {
 	color:#F44E3F;
 	text-decoration:none;
 }
+
+#processing {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0,0,0,0.4);
+	z-index: 9999999;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+#processing .p_content {
+	height: 26px;
+	line-height: 26px;
+	position: absolute;
+	top: 50%;
+	margin-top: -13px;
+	left: 0;
+	width: 100%;
+	text-align: center;
+	color: #FFF;
+	font-size: 20px;
+}
+
+.captcha {
+	height: 34px;
+	line-height: 34px;
+	margin-top: 0px;
+	border-radius: 3px;
+	min-height: 30px;
+}
+.captcha input {
+	min-height: 30px;
+	height: 100%;
+	margin-top: 0;
+	padding-top: 0;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	padding: 0 0.8em;
+}
+.captch_code input {
+	vertical-align: middle;
+	width: 66.68%;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+}
+.captch_code img{
+    margin-top:1px;
+	width: 33.22%; /*196*/
+	height: 100%;
+	display: inline-block;
+	font-size: 14px;
+	border-radius: 3px;
+	float: right;
+	text-align: center;
+	font-size: 14px;
+	text-decoration: none;
+}
+.captch_code input:focus {
+	outline:0 none;
+	border-color: #66afe9;
+	box-shadow: 0 1px 1px rgba(0,0,0,0.075) inset, 0 0 8px rgba(102,175,233,0.6);
+}

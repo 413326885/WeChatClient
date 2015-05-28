@@ -10,11 +10,11 @@
 	position: absolute;
 	top: 8px;
 	font-size: 20px;
-	margin-left: -18px;
 }
 
 #navbar {
 	background: #FFF;
+	text-align: center;
 }
 
 #deposit_form {

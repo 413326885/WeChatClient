@@ -18,7 +18,7 @@ $(function() {
         }
 
         // 向服务器提交请求
-        processing("正在解除绑定");
+        processing("正在解除绑定，请稍后...");
         var options = {
             "openId": openId,
             "accessToken": accessToken
@@ -26,28 +26,29 @@ $(function() {
         unbind_account(options);
     });
 
-    function unbind_account(options) {
-        var defaultOptions = {
-            "openId": "1234567",
-            "accessToken": "123456"
-        }
-        options = $.extend(defaultOptions, options);
-        $.ajax({
-            url: serverUrl,
-            dataType: "json",
-            data: options,
-            type: "POST",
-            success: function(data) {
-                if(data.code == 200){
-                    clearLocal("username", options.name);
-                    clearLocal("openId", options.openId);
-                    clearLocal("accessToken", options.accessToken);
-                    document.location.href="./subjects.html";
-                } else {
-                    showTips("解绑账号", data.message);
-                    processed();
-                }
-            }
-        });
-    }
 });
+
+function unbind_account(options) {
+    var defaultOptions = {
+        "openId": "1234567",
+        "accessToken": "123456"
+    }
+    options = $.extend(defaultOptions, options);
+    $.ajax({
+        url: serverUrl,
+        dataType: "json",
+        data: options,
+        type: "POST",
+        success: function(data) {
+            if(data.code == 200){
+                clearLocal("username", options.name);
+                clearLocal("openId", options.openId);
+                clearLocal("accessToken", options.accessToken);
+                window.open("./subjects.html");
+            } else {
+                showTips("解绑账号", data.message);
+                processed();
+            }
+        }
+    });
+}

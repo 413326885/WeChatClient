@@ -1,5 +1,39 @@
 $(function() {
 
+    //检查用户名是否存在
+    $("#username").blur(function() {
+
+        var username = $("#username").val();
+
+        // 判断是否输入用户名
+        if ($.trim(username) === '') {
+            return;
+        }
+        if (!isUsernameValid(username)) {
+            return;
+        }
+
+        // 检查用户名是否存在
+        isUsernameExist(username);
+    });
+
+    //检查手机号码是否存在
+    $("#phonenum").blur(function() {
+
+        var phonenum = $("#phonenum").val();
+
+        // 判断是否输入手机号码
+        if ($.trim(phonenum) === '') {
+            return;
+        }
+        if (!isPhoneValid(phonenum)) {
+            return;
+        }
+
+        // 检查手机号码是否存在
+        isPhoneExist(username);
+    });
+
     //获取手机验证码
     $("#send_phone_code").on('click', function() {
 
@@ -7,24 +41,24 @@ $(function() {
         var captcha = $("#image_code").val();
         var phonenum = $("#phonenum").val();
 
-        // 判断是否输入图形验证码
-        if ($.trim(captcha) === '') {
-            showTips("图形验证码", "请输入图形验证码");
-            return;
-        }
-        if (!isCaptchaValid(captcha)) {
-            showTips("图形验证码", "图形验证码为5位");
-            return;
-        }
-        // 判断是否输入手机号码
-        if ($.trim(phonenum) === '') {
-            showTips("手机号码", "请输入手机号码");
-            return;
-        }
-        if (!isPhoneValid(phonenum)) {
-            showTips("手机号码", "手机号格式不正确");
-            return;
-        }
+//        // 判断是否输入图形验证码
+//        if ($.trim(captcha) === '') {
+//            showTips("图形验证码", "请输入图形验证码");
+//            return;
+//        }
+//        if (!isCaptchaValid(captcha)) {
+//            showTips("图形验证码", "图形验证码为5位");
+//            return;
+//        }
+//        // 判断是否输入手机号码
+//        if ($.trim(phonenum) === '') {
+//            showTips("手机号码", "请输入手机号码");
+//            return;
+//        }
+//        if (!isPhoneValid(phonenum)) {
+//            showTips("手机号码", "手机号格式不正确");
+//            return;
+//        }
 
         $("#send_phone_code").countdown();
         $("#send_phone_code").sendPhoneCode();
@@ -99,7 +133,7 @@ $(function() {
         // 向服务器提交请求
         processing("正在注册");
         var options = {
-            ”name“: username,
+            "name": username,
             "password": password,
             "phone": phonenum,
             "smsVerifyCode": phonecode
@@ -108,29 +142,69 @@ $(function() {
 
     });
 
-    function register(options) {
-        var defaultOptions = {
-            ”name“: "a1234567",
-            "password": "a1234567",
-            "phone": "18817627117",
-            "smsVerifyCode": "123456"
-        }
-        options = $.extend(defaultOptions, options);
-        $.ajax({
-            url: serverUrl,
-            dataType: "json",
-            data: options,
-            type: "POST",
-            success: function(data) {
-                if(data.code == 200){
-                    document.location.href="./register_success.html";
-                } else {
-                    showTips("注册新用户", data.message);
-                    processed();
-                }
-            }
-        });
-    }
-
 });
 
+// 注册
+function register(options) {
+    var defaultOptions = {
+        "name": "a1234567",
+        "password": "a1234567",
+        "phone": "18817627117",
+        "smsVerifyCode": "123456"
+    }
+    options = $.extend(defaultOptions, options);
+    $.ajax({
+        url: serverUrl,
+        dataType: "json",
+        data: options,
+        type: "POST",
+        success: function(data) {
+            if(data.code == 200){
+                document.location.href="./register_success.html";
+            } else {
+                showTips("注册新用户", data.message);
+                processed();
+            }
+        }
+    });
+}
+
+// 检查用户名是否存在
+function isUsernameExist(username) {
+    var options = {
+        "name": username
+    }
+    $.ajax({
+        url: serverUrl,
+        dataType: "json",
+        data: options,
+        type: "POST",
+        success: function(data) {
+            if(data.code == 200){
+                showTips("检查用户名", data.message);
+            } else {
+                //showTips("检查用户名", data.message);
+            }
+        }
+    });
+}
+
+// 检查手机号码是否存在
+function isPhoneExist(phone) {
+    var options = {
+        "phone": phone
+    }
+    $.ajax({
+        url: serverUrl,
+        dataType: "json",
+        data: options,
+        type: "POST",
+        success: function(data) {
+            if(data.code == 200){
+                showTips("检查手机号码", data.message);
+            } else {
+                //showTips("检查手机号码", data.message);
+            }
+        }
+    });
+}
